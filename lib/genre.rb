@@ -30,4 +30,9 @@ class Genre
     @songs
   end
 
+  def artists
+    artists = @songs.collect do |songs|
+      songs.artists
+    end
+  end
 end
