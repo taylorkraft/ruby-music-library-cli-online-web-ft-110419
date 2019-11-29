@@ -1,5 +1,5 @@
 class Song
-  attr_accessor  :name
+  attr_accessor :name
   attr_reader :artist, :genre
   @@all = []
 
@@ -47,7 +47,6 @@ class Song
  end
 
   def self.find_by_name(song)
-    song.name
-
+    
   end
 end
