@@ -1,6 +1,5 @@
 class Genre
   attr_accessor :name
-  attr_writer :artists
   @@all = []
 
   def initialize(name)
