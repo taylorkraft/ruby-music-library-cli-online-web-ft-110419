@@ -2,14 +2,14 @@ module Concerns
 
   module InstanceMethods
 
-    def save 
+    def save
       self.class.all << self
     end
 
   end
 
   module Findable
-    
+
   def find_by_name(name)
     self.all.find do |object|
         object.name == name
