@@ -30,7 +30,4 @@ class Genre
     @songs
   end
 
-  def artists
-    Artists.all
-  end
 end
