@@ -1,17 +1,23 @@
-module Concerns::Findable
+module Concerns
 
+  module InstanceMethods
 
-  def self.find_by_name(name)
-    all.find do |object|
+    def save 
+      self.class.all << self
+    end
+
+  end
+
+  module Findable
+    
+  def find_by_name(name)
+    self.all.find do |object|
         object.name == name
     end
   end
 
-
-
-
-  def self.find_or_create_by_name(name)
-    find_by_name(name) || self.create(name)
+  def find_or_create_by_name(name)
+  self.find_by_name(name) || self.create(name)
   end
 
 
